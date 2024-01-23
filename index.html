@@ -10,16 +10,24 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
     <!-- favicons -->
     <link rel="shortcut icon" href="src/img/a13e001f0e0f2b8af78d31c7a356568f-removebg-preview.png" type="image/x-icon">
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
 </head>
 
 <body class="dark:bg-black">
     <!-- header start -->
-    <header class="fixed bg-white top-0 left-0 w-full z-50 flex items-center">
+    <header class="fixed bg-white dark:bg-black dark:text-white top-0 left-0 w-full z-50 flex items-center">
         <div class="w-full ml-auto mr-auto px-[16px] py-[19px]">
             <div class="relative flex justify-between items-center">
-                <a href="#home"><img
-                        src="https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/dd9b911d-7295-43fc-9452-17a585607187/logo.png?format=1500w"
-                        class="w-16 ml-2 lg:w-20" alt=""></a>
+                <a href="#home">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/dd9b911d-7295-43fc-9452-17a585607187/logo.png?format=1500w"
+                        class="w-16 ml-2 lg:w-20" alt="">
+                </a>
                 <div class="flex items-center">
                     <button id="humberger" name="humberger" type="button" class="absolute block right-4 lg:hidden">
                         <span
@@ -29,7 +37,7 @@
                             class="humberger-line origin-bottom-left relative left-1 transition duration-500 ease-in-out"></span>
                     </button>
                     <nav id="nav-menu" style="box-shadow: none;"
-                        class="absolute py-1 right-[-1rem] max-w-[60%] w-full bg-white top-[2.80rem]  rounded-lg rounded-e-none shadow-lg hidden lg:block lg:static lg:max-w-full lg:bg-transparent lg:shadow-none">
+                        class="absolute py-1 right-[-1rem] max-w-[60%] w-full bg-white dark:bg-black dark:text-white top-[2.80rem]  rounded-lg rounded-e-none shadow-lg hidden lg:block lg:static lg:max-w-full lg:bg-transparent lg:shadow-none">
                         <ul class="block lg:flex">
                             <li class="group">
                                 <a href="#home"
@@ -44,18 +52,24 @@
                                     class="text-base py-2 mx-8 flex group-hover:text-slate-200 duration-200 ease-in-out ">Gallery</a>
                             </li>
 
-                            <li class="group items-center mt-[.6rem] pl-8">
+                            <li class="group">
+                                <a href="#best"
+                                    class="text-base py-2 mx-8 flex group-hover:text-slate-200 duration-200 ease-in-out ">Best
+                                    Seller</a>
+                            </li>
+
+                            <li class="group items-center ml-7 md:mt-[.6rem] pl-8">
                                 <div class="flex">
-                                    <span class="mr-2 text-sm text-slate-500">Light</span>
+                                    <!-- <span class="mr-2 text-sm text-slate-500">Light</span> -->
                                     <input type="checkbox" class="hidden" id="dark-toggle">
                                     <label for="dark-toggle">
                                         <div
-                                            class="flex rounded-full h-5 w-9 bg-slate-400 items-center p-1 cursor-pointer">
-                                            <div class="toggle-circle h-5 w-[1.20rem] ml-[-3px] bg-white rounded-full">
+                                            class="flex rounded-full h-5 w-9 bg-slate-400 mt-[.10rem] ml-[-2rem] items-center p-1 cursor-pointer">
+                                            <div class="toggle-circle h-5 w-5 ml-[-4px] bg-white rounded-full">
                                             </div>
                                         </div>
                                     </label>
-                                    <span class="ml-2 text-sm text-slate-500">Dark</span>
+                                    <!-- <span class="ml-2 text-sm text-slate-500">Dark</span> -->
                                 </div>
                             </li>
                         </ul>
@@ -92,7 +106,7 @@
     <section id="about" class="py-16">
         <!-- mission -->
         <div class="mission text-center pt-10">
-            <h1 class="font-bold text-2xl mb-3 bg-slate-700 inline-block py-3 px-7 rounded-lg text-white">MISSION</h1>
+            <h1 class="font-bold text-2xl mb-3 bg-red-500 dark:bg-slate-700 inline-block py-3 px-7 rounded-lg text-white">MISSION</h1>
             <h3 class="px-5 text-justify dark:text-white" id="our-mission">Our mission is to spread our passion for high
                 quality coffee
                 from Indonesia to the rest of
@@ -121,7 +135,7 @@
     <!-- section picture start -->
     <section id="picture" class="py-8">
         <div class="max-w-[1240px] mx-auto py-16 px-4 text-center">
-            <h1 class="font-bold text-2xl mb-3 bg-slate-700 inline-block py-3 px-7 rounded-lg text-white">ALL PRODUCT
+            <h1 class="font-bold text-2xl mb-3 bg-red-500 dark:bg-slate-700 inline-block py-3 px-7 rounded-lg text-white">ALL PRODUCT
                 HERE 100% ORIGINAL</h1>
             <p class="font-semibold text-justify dark:text-slate-50 lg:text-center text-slate-500 mb-5">“At Kopi
                 Kenangan, our dream is to
@@ -216,9 +230,10 @@
     <section id="best" class="py-[10rem]  ">
         <div class="program-content text-center mt-[-4rem]">
             <div class="mb-5">
-                <h1 class="font-bold text-2xl mb-3 bg-slate-700 inline-block py-3 px-7 rounded-lg text-white">Our best
+                <h1 class="font-bold text-2xl mb-3 dark:bg-slate-700 bg-red-500 inline-block py-3 px-7 rounded-lg text-white">Our best
                     seller</h1>
-                <h3 class="px-5 text-justify dark:text-white" id="our-mission">Our mission is to spread our passion for high quality
+                <h3 class="px-5 text-justify dark:text-white" id="our-mission">Our mission is to spread our passion for
+                    high quality
                     coffee
                     from Indonesia to the rest of
                     Asia.
@@ -229,9 +244,9 @@
                     class="text-left cursor-pointer w-[80%] md:w-[20%] bg-white p-1 rounded-3xl hover:shadow-2xl hover:scale-[1.03] duration-[330ms] ease-in-out">
                     <img class="rounded-t-3xl h-72 w-full" src="src/img/Kenangan mantan.jpeg" alt="TKIT Asy-Syukriyyah">
                     <div class="card-text p-3">
-                        <h2 class="mb-2">SDIT Qur'anic Asy-Syukriyyah</h2>
-                        <button type="button" class="bg-green-500 text-white font-bold text-sm py-1 px-3 rounded-xl">
-                            Daftar
+                        <h2 class="mb-2">Kopi kenangan mantan</h2>
+                        <button type="button" class="bg-red-500 text-white font-bold text-sm py-1 px-3 rounded-xl">
+                            Order
                         </button>
                     </div>
                 </div>
@@ -241,9 +256,9 @@
                     <img class="rounded-t-3xl h-72 w-full" src="src/img/Light Caramel Latte.jpg"
                         alt="TKIT Asy-Syukriyyah">
                     <div class="card-text p-3">
-                        <h2 class="mb-2">SDIT Qur'anic Asy-Syukriyyah</h2>
-                        <button type="button" class="bg-green-500 text-white font-bold text-sm py-1 px-3 rounded-xl">
-                            Daftar
+                        <h2 class="mb-2">Light Caramel Latte</h2>
+                        <button type="button" class="bg-red-500 text-white font-bold text-sm py-1 px-3 rounded-xl">
+                            Order
                         </button>
                     </div>
                 </div>
@@ -252,9 +267,9 @@
                     class="text-left cursor-pointer w-[80%] md:w-[20%] bg-white p-1 rounded-3xl hover:shadow-2xl hover:scale-[1.03] duration-[330ms] ease-in-out">
                     <img class="rounded-t-3xl h-72 w-full" src="src/img/Thai Tea.jpg" alt="TKIT Asy-Syukriyyah">
                     <div class="card-text p-3">
-                        <h2 class="mb-2">SDIT Qur'anic Asy-Syukriyyah</h2>
-                        <button type="button" class="bg-green-500 text-white font-bold text-sm py-1 px-3 rounded-xl">
-                            Daftar
+                        <h2 class="mb-2">Thai Tea</h2>
+                        <button type="button" class="bg-red-500 text-white font-bold text-sm py-1 px-3 rounded-xl">
+                            Order
                         </button>
                     </div>
                 </div>
@@ -264,9 +279,9 @@
                     <img class="rounded-t-3xl h-72 w-full" src="src/img/Susu Sultan Boba Gula Aren.jpg"
                         alt="TKIT Asy-Syukriyyah">
                     <div class="card-text p-3">
-                        <h2 class="mb-2">SDIT Qur'anic Asy-Syukriyyah</h2>
-                        <button type="button" class="bg-green-500 text-white font-bold text-sm py-1 px-3 rounded-xl">
-                            Daftar
+                        <h2 class="mb-2">Susu Sultan</h2>
+                        <button type="button" class="bg-red-500 text-white font-bold text-sm py-1 px-3 rounded-xl">
+                            Order
                         </button>
                     </div>
                 </div>
@@ -275,9 +290,9 @@
                     class="text-left cursor-pointer w-[80%] md:w-[20%] bg-white p-1 rounded-3xl hover:shadow-2xl hover:scale-[1.03] duration-[330ms] ease-in-out">
                     <img class="rounded-t-3xl h-72 w-full" src="src/img/Milo Dinosaurus.jpg" alt="TKIT Asy-Syukriyyah">
                     <div class="card-text p-3">
-                        <h2 class="mb-2">SDIT Qur'anic Asy-Syukriyyah</h2>
-                        <button type="button" class="bg-green-500 text-white font-bold text-sm py-1 px-3 rounded-xl">
-                            Daftar
+                        <h2 class="mb-2">Milo Dinosaurus</h2>
+                        <button type="button" class="bg-red-500 text-white font-bold text-sm py-1 px-3 rounded-xl">
+                            Order
                         </button>
                     </div>
                 </div>
@@ -287,9 +302,9 @@
                     <img class="rounded-t-3xl h-72 w-full" src="src/img/Es Susu Boba Gula Aren Large___.jpeg"
                         alt="TKIT Asy-Syukriyyah">
                     <div class="card-text p-3">
-                        <h2 class="mb-2">SDIT Qur'anic Asy-Syukriyyah</h2>
-                        <button type="button" class="bg-green-500 text-white font-bold text-sm py-1 px-3 rounded-xl">
-                            Daftar
+                        <h2 class="mb-2">Es susu boba gula aren</h2>
+                        <button type="button" class="bg-red-500 text-white font-bold text-sm py-1 px-3 rounded-xl">
+                            Order
                         </button>
                     </div>
                 </div>
@@ -298,9 +313,9 @@
                     class="text-left cursor-pointer w-[80%] md:w-[20%] bg-white p-1 rounded-3xl hover:shadow-2xl hover:scale-[1.03] duration-[330ms] ease-in-out">
                     <img class="rounded-t-3xl h-72 w-full" src="src/img/Kenangan mantan.jpeg" alt="TKIT Asy-Syukriyyah">
                     <div class="card-text p-3">
-                        <h2 class="mb-2">SDIT Qur'anic Asy-Syukriyyah</h2>
-                        <button type="button" class="bg-green-500 text-white font-bold text-sm py-1 px-3 rounded-xl">
-                            Daftar
+                        <h2 class="mb-2">Kenangan Mantan</h2>
+                        <button type="button" class="bg-red-500 text-white font-bold text-sm py-1 px-3 rounded-xl">
+                            Order
                         </button>
                     </div>
                 </div>
@@ -338,7 +353,8 @@
     <!-- footer end -->
 
     <!-- back to top start -->
-    <a href="#home" class="fixed bottom-8 right-8 z-[9999] h-10 w-10 bg-red-500 rounded-full hidden animate-bounce"
+    <a href="#home"
+        class="fixed bottom-8 right-8 z-[9999] h-10 w-10 bg-red-500 dark:bg-black dark:animate-spin rounded-full hidden animate-bounce"
         id="to-top">
         <span class="flex justify-center items-center mt-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
