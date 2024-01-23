@@ -44,10 +44,10 @@
                                     class="text-base py-2 mx-8 flex group-hover:text-slate-200 duration-200 ease-in-out ">Gallery</a>
                             </li>
 
-                            <li class="group items-center pl-8">
+                            <li class="group items-center mt-[.6rem] pl-8">
                                 <div class="flex">
                                     <span class="mr-2 text-sm text-slate-500">Light</span>
-                                    <input type="checkbox" id="dark-toggle">
+                                    <input type="checkbox" class="hidden" id="dark-toggle">
                                     <label for="dark-toggle">
                                         <div
                                             class="flex rounded-full h-5 w-9 bg-slate-400 items-center p-1 cursor-pointer">
@@ -93,15 +93,16 @@
         <!-- mission -->
         <div class="mission text-center pt-10">
             <h1 class="font-bold text-2xl mb-3 bg-slate-700 inline-block py-3 px-7 rounded-lg text-white">MISSION</h1>
-            <h3 class="px-5 text-justify" id="our-mission">Our mission is to spread our passion for high quality coffee
+            <h3 class="px-5 text-justify dark:text-white" id="our-mission">Our mission is to spread our passion for high
+                quality coffee
                 from Indonesia to the rest of
                 Asia.
             </h3>
         </div>
 
-        <div class="about flex flex-col md:flex-row justify-around mt-10 items-center">
+        <div class="about flex flex-col md:flex-row justify-around mt-10 items-center dark:text-white">
             <div class="about-img mb-5">
-                <img class="w-[90%] lg:w-[500px] m-auto"
+                <img class="w-[90%] dark:rounded-lg lg:w-[500px] m-auto"
                     src="https://images.squarespace-cdn.com/content/v1/5fa1095912d2fc6dfc63ac9c/1611120028335-NE9GBCXETHQE7VP510JI/KOPI_KENANGAN_63326Green.jpg?format=1000w"
                     alt="kopi-kenangan">
             </div>
@@ -122,7 +123,8 @@
         <div class="max-w-[1240px] mx-auto py-16 px-4 text-center">
             <h1 class="font-bold text-2xl mb-3 bg-slate-700 inline-block py-3 px-7 rounded-lg text-white">ALL PRODUCT
                 HERE 100% ORIGINAL</h1>
-            <p class="font-semibold text-justify lg:text-center text-slate-500 mb-5">“At Kopi Kenangan, our dream is to
+            <p class="font-semibold text-justify dark:text-slate-50 lg:text-center text-slate-500 mb-5">“At Kopi
+                Kenangan, our dream is to
                 serve high quality coffee, made with the freshest local ingredients to customers across Indonesia – and
                 the rest of the world.” <br>— Edward Tirtanata, CEO and Founder</p>
             <div class="grid grid-rows-none gap-2 md:grid-cols-2 lg:grid-cols-4">
@@ -136,7 +138,7 @@
                             <!-- Item 1 -->
                             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                                 <span
-                                    class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First
+                                    class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-white">First
                                     Slide</span>
                                 <img src="src/img/Why You Should Be Grinding Your Coffee Beans In Advance.jpeg"
                                     class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
@@ -169,7 +171,7 @@
                             class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
                             data-carousel-prev>
                             <span
-                                class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-white group-hover:bg-white/50 dark:group-hover:bg-white">
                                 <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -182,7 +184,7 @@
                             class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
                             data-carousel-next>
                             <span
-                                class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-white group-hover:bg-white/50 dark:group-hover:bg-white">
                                 <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -216,7 +218,7 @@
             <div class="mb-5">
                 <h1 class="font-bold text-2xl mb-3 bg-slate-700 inline-block py-3 px-7 rounded-lg text-white">Our best
                     seller</h1>
-                <h3 class="px-5 text-justify" id="our-mission">Our mission is to spread our passion for high quality
+                <h3 class="px-5 text-justify dark:text-white" id="our-mission">Our mission is to spread our passion for high quality
                     coffee
                     from Indonesia to the rest of
                     Asia.
